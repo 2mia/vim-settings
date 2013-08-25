@@ -1,3 +1,45 @@
 [submodule "bundle/nerdtree.git"]
 	path = bundle/nerdtree.git
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/phpcomplete.vim.git"]
+	path = bundle/phpcomplete.vim.git
+	url = git://github.com/shawncplus/phpcomplete.vim.git
+[submodule "bundle/plantuml-syntax.git"]
+	path = bundle/plantuml-syntax.git
+	url = https://github.com/aklt/plantuml-syntax.git
+[submodule "bundle/syntastic.git"]
+	path = bundle/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-coffee-script.git"]
+	path = bundle/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-colors-solarized.git"]
+	path = bundle/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-golang.git"]
+	path = bundle/vim-golang.git
+	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "https:/github.com/einars/js-beautify.git"]
+	path = https:/github.com/einars/js-beautify.git
+	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "bundle/vim-json.git"]
+	path = bundle/vim-json.git
+	url = https://github.com/elzr/vim-json.git
+[submodule "bundle/vim-markdown.git"]
+	path = bundle/vim-markdown.git
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/vim-multiple-cursors.git"]
+	path = bundle/vim-multiple-cursors.git
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/vim-powerline.git"]
+	path = bundle/vim-powerline.git
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/vim-rails.git"]
+	path = bundle/vim-rails.git
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-ruby.git"]
+	path = bundle/vim-ruby.git
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/vim-scala.git"]
+	path = bundle/vim-scala.git
+	url = https://github.com/derekwyatt/vim-scala.git
