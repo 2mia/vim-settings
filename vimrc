@@ -1,5 +1,6 @@
 syntax on
 colorscheme koehler
+"colorscheme codeschool
 set nu
 set mouse=a
 set expandtab
@@ -11,6 +12,8 @@ set autoindent
 :autocmd FileType c setlocal makeprg=make
 :autocmd FileType cpp setlocal makeprg=make
 :autocmd FileType java setlocal makeprg=javac\ %
+:autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+:autocmd FileType json setlocal equalprg=python\ -m\ json.tool
 
 nnoremap <silent> <F3> :Grep<CR> 
 nnoremap <silent> <F8> :TagbarOpen<CR>:NERDTree<CR>
@@ -22,14 +25,17 @@ set laststatus=2
 
 if has("gui_running")
     set guioptions-=T
+    set guioptions-=r 
 endif
 set guifont=Monaco\ for\ Powerline:h14
 
 "set .swp files location
-set directory=~
+"set directory=~
 
 let g:Powerline_symbols = 'fancy'
 
 call pathogen#infect()
 call pathogen#helptags()
 set background=dark
+
+
