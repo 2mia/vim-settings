@@ -1,6 +1,9 @@
 syntax on
+filetype plugin on
+
 colorscheme koehler
-"colorscheme codeschool
+colorscheme codeschool
+
 set nu
 set mouse=a
 set expandtab
@@ -14,9 +17,12 @@ set autoindent
 :autocmd FileType java setlocal makeprg=javac\ %
 :autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 :autocmd FileType json setlocal equalprg=python\ -m\ json.tool
+:autocmd FileType go setlocal makeprg=go\ run\ %
 
 nnoremap <silent> <F3> :Grep<CR> 
-nnoremap <silent> <F8> :TagbarOpen<CR>:NERDTree<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>:NERDTreeToggle<CR>
+nnoremap <D-B> :make<CR>
+
 "nnoremap <silent> <D-left> :bprevious<CR>
 
 set hlsearch
@@ -27,7 +33,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r 
 endif
-set guifont=Monaco\ for\ Powerline:h14
+set guifont=Monaco\ for\ Powerline:h12
 
 "set .swp files location
 "set directory=~
