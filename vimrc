@@ -36,7 +36,7 @@ endif
 set guifont=Monaco\ for\ Powerline:h12
 
 "set .swp files location
-"set directory=~
+set directory=~
 
 let g:Powerline_symbols = 'fancy'
 
