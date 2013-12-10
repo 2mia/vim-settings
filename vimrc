@@ -45,3 +45,8 @@ call pathogen#helptags()
 set background=dark
 
 
+"debugger
+":map <F8> :exe "Cbreak " . expand("%:p") . ":" . line(".")<CR>
+
+nnoremap <D-5> :Pyclewn<CR>:Cmapkeys<CR>
+
