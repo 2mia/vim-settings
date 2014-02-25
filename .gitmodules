@@ -49,3 +49,12 @@
 [submodule "bundle/vim-gocode"]
 	path = bundle/vim-gocode
 	url = https://github.com/Blackrush/vim-gocode
+[submodule "bundle/quickopen"]
+	path = bundle/quickopen
+	url = https://github.com/natduca/quickopen
+[submodule "bundle/vim-easytags"]
+	path = bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags
+[submodule "bundle/vim-misc"]
+	path = bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
