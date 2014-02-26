@@ -17,12 +17,11 @@ set autoindent
 :autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 :autocmd FileType json setlocal equalprg=python\ -m\ json.tool
 :autocmd FileType go setlocal makeprg=go\ run\ %
+:autocmd FileType python setlocal makeprg=python\ %
 
 nnoremap <silent> <F3> :Grep<CR> 
 nnoremap <silent> <F8> :TagbarToggle<CR>:NERDTreeToggle<CR>
-nnoremap <D-B> :make<CR>
-
-"nnoremap <silent> <D-left> :bprevious<CR>
+nnoremap <D-b> :silent! make<CR> :vert copen<CR>
 
 set hlsearch
 set cursorline
