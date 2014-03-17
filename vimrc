@@ -11,7 +11,7 @@ set shiftwidth=4
 set autoindent
 
 :autocmd FileType make setlocal noexpandtab
-:autocmd FileType c setlocal makeprg=make
+:autocmd FileType c setlocal makeprg=make\ %:r
 :autocmd FileType cpp setlocal makeprg=make
 :autocmd FileType java setlocal makeprg=javac\ % | :TagbarOpen
 :autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
@@ -21,16 +21,16 @@ set autoindent
 
 nnoremap <silent> <F3> :Grep<CR> 
 nnoremap <silent> <F8> :TagbarToggle<CR>:NERDTreeToggle<CR>
-nnoremap <D-b> :silent! make<CR> :vert copen<CR>
+nnoremap <D-b> :silent! make<CR> :vert copen<CR>:vertical resize 75<CR>:echo "make executed"<CR><C-w><C-p>
 
 set hlsearch
 set cursorline
 set laststatus=2
 
 if has("gui_running")
-    set guioptions-=T
-    set guioptions-=r 
-    colorscheme codeschool
+  set guioptions-=T
+  set guioptions-=r 
+  colorscheme codeschool
 endif
 set guifont=Monaco\ for\ Powerline:h12
 
@@ -43,6 +43,8 @@ call pathogen#infect()
 call pathogen#helptags()
 set background=dark
 
+"no golang complete Strach window
+set completeopt-=preview
 
 "debugger
 ":map <F8> :exe "Cbreak " . expand("%:p") . ":" . line(".")<CR>
