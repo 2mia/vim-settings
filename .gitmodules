@@ -58,3 +58,9 @@
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc
+[submodule "bundle/gotags"]
+	path = bundle/gotags
+	url = https://github.com/jstemmer/gotags
+[submodule "bundle/vim-dutyl"]
+	path = bundle/vim-dutyl
+	url = https://github.com/idanarye/vim-dutyl

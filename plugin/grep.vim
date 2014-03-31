@@ -341,7 +341,7 @@ endif
 
 " Default grep options
 if !exists("Grep_Default_Options")
-    let Grep_Default_Options = '-rIn'
+    let Grep_Default_Options = '-rIn --exclude-dir={node_modules,dist,.tmp}'
 endif
 
 " Use the 'xargs' utility in combination with the 'find' utility. Set this
@@ -502,7 +502,7 @@ function! s:RunGrepRecursive(cmd_name, grep_cmd, action, ...)
 
     " No argument supplied. Get the identifier and file list from user
     if pattern == "" 
-        let pattern = input("Search for pattern: ", expand("<cword>"))
+        let pattern = input("Search1 for pattern: ", expand("<cword>"))
         if pattern == ""
             return
         endif
@@ -680,7 +680,7 @@ function! s:RunGrepSpecial(cmd_name, which, action, ...)
         let pattern = a:{argcnt}
     else
         " No argument supplied. Get the identifier and file list from user
-        let pattern = input("Search for pattern: ", expand("<cword>"))
+        let pattern = input("Search2 for pattern: ", expand("<cword>"))
         if pattern == ""
             return
         endif
@@ -755,7 +755,8 @@ function! s:RunGrep(cmd_name, grep_cmd, action, ...)
 
     " Get the identifier and file list from user
     if pattern == "" 
-        let pattern = input("Search for pattern: ", expand("<cword>"))
+        let pattern = input("Search3 for pattern: ", expand("<cword>"))
+        let pattern = substitute(pattern, '^\s*\(.\{-}\)\s*$', '\1', '')
         if pattern == ""
             return
         endif
